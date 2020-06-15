@@ -1,0 +1,6 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <titulo></titulo>
+  <form-pesquisar (SearchMovie)="onSearchMovie($event)"> </form-pesquisar>
+  <thumb *ngFor="let movie of listMovies" [movieItem]="movie"> </thumb>
+</div>
