@@ -4,13 +4,13 @@ import { IDetalhesMovie } from "../../app/DetalhesMovie";
 import { ServicesMovies } from "../../services/servicesMovies";
 
 @Component({
-  selector: "detalhes-movie",
+  selector: "movie-detail",
   templateUrl: "./detalhesMovie.component.html",
   styleUrls: ["./detalhesMovie.component.css"]
 })
 export class detalhesMovie implements OnInit {
   id = "Movies App";
-  detalhesMovie: IDetalhesMovie;
+  moviedetail: IDetalhesMovie;
 
   constructor(private route: ActivatedRoute, private movies: ServicesMovies) {}
 
@@ -21,7 +21,7 @@ export class detalhesMovie implements OnInit {
 
     this.movies.getDetail(this.id).subscribe(data => {
       console.log(data);
-      this.detalhesMovie = {
+      this.moviedetail = {
         id: data.id,
         name: data.title,
         date: data.release_date,

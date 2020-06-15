@@ -6,7 +6,7 @@ import { detalhesMovie } from "../components/detalhesMovie/detalhesMovie.compone
 import { home } from "../components/home/home.component";
 const routes: Routes = [
   { path: "", component: home },
-  { path: "detalhes-movie/:id", component: detalhesMovie }
+  { path: "movie-detail/:id", component: detalhesMovie }
 ]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
